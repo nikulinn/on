@@ -2,20 +2,20 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font: normal 12px 'Trebuchet MS'; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font: normal 13px 'Open Sans'; background:#fff; color:#444; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
 	padding:0;
 	margin:0;
 	outline:none;
 	list-style:none;
 }
-select, input, textarea        { font-size:12px; vertical-align:middle; }
+select, input, textarea        { font-size:13px; vertical-align:middle; }
 textarea                       { vertical-align:top; }
 :focus                         { outline:none; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:12px "Open sans", sans-serif; color:#000; text-decoration:none; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -39,7 +39,6 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .wrapper{
-	background: url(../images/wrapper.jpg) top repeat-x;
 	overflow:hidden;
     height: 100%;
 }
@@ -56,21 +55,193 @@ a:hover                        { text-decoration:none; }
     height: 100%;
     margin: 0 auto;
 }
+
+/*-------------------------header----------------------------*/
 header{
     width: 100%;
     height:50px;
-    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    border-bottom: #dadada;
 }
-.content{
+
+.main-logo{
+    float: left;
+    max-width: 200px;
     width: 100%;
+}
+.main-logo a{
+    margin-left: 45px;
+}
+
+.main-nav{
+    padding: 10px 0;
+    font-size: 13px;
+}
+.custom-select select {
+    background: transparent;
+    width: 307px;
+    padding: 5px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 30px;
+    -webkit-appearance: none;
+    color: #222;
+}
+.custom-select  {
+    width: 279px;
+    height: 30px;
+    overflow: hidden;
+    background: url(../images/icon-arrow-down.png) no-repeat 250px center #fff;
+    background-size: 5%;
+    border: 1px solid #ccc;
+    float: left;
+    border: 1px solid #ccc;
+}
+.right-panel{
+    float: right;
+}
+.right-panel-main p{
+    font-size: 13px;
+    float: left;
+    padding: 6px 10px;
+    border-right: 1px solid #bfbfbf;
+    color: #444;
+    margin-top: 2px;
+}
+.right-panel-main a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    float:left;
+    margin:0 10px;
+    font-size: 16px;
+    color: #444;
+    padding: 3px 8px;
+    box-sizing: border-box;
+
+}
+
+
+/*-----------------------------------------------------------*/
+#sidebar{
+    width: 200px;
+    background-color: #363636;
+    float: left;
+    height: inherit;
+    clear: both;
+}
+#sidebar li{
+    height: 50px;
+    border-bottom: 1px solid #4a4a4a;
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#sidebar li:first-child{
+    height: 170px;
+    cursor: default;
+}
+.about-nav img{
+    margin-left: 35px;
+}
+
+.about-nav p{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+.about-nav p:last-child{
+    font-size: 13px;
+    font-weight: 200;
+}
+#sidebar a{
+    color:#fff;
+    font-size:14px;
+    width: 14px;
+}
+#sidebar a i{
+    margin-right: 15px;
+}
+.dashboard-nav:hover{background-color: #303030;}
+.dashboard-nav-active{background: #303030 url("../images/nav-arrow.png") no-repeat right center;}
+.users-nav:hover{background-color: #303030;}
+.users-nav-active{background: #303030 url("../images/nav-arrow.png") no-repeat right center;}
+.assets-nav:hover{background-color: #303030;}
+.assets-nav-active{background: #303030 url("../images/nav-arrow.png") no-repeat right center;}
+.logs-nav:hover{background-color: #303030;}
+.logs-nav-active{background: #303030 url("../images/nav-arrow.png") no-repeat right center;}
+.billing-nav:hover{background-color: #303030;}
+.billing-nav-active{background: #303030 url("../images/nav-arrow.png") no-repeat right center;}
+/*---------------------content -------------*/
+main{
+    padding: 30px;
+    box-sizing: border-box;
+    width: calc(100% - 200px);
     max-width: 1200px;
-    background-color: #ccc;
+    background-color: #f3f3f3;
     height: inherit;
     overflow: hidden;
 }
-#sidebar{
-    width: 200px;
-    background-color: #2f2f2f;
+h2{
+    font-size: 24px;
+    font-weight: 400;
+}
+.main-chart{
+    width: 100%;
+    height:610px;
+    border: 1px solid #dadada;
+}
+.section-header span{
+    font-weight: 200;
+    padding: 5px 12px;
+    color: #ffffff;
     float: left;
-    height: inherit;
+
+
+}
+.section-header{
+    height: 35px;
+    background-color: #4c4f53;
+    border: 1px solid #45474d;
+    box-sizing: border-box;
+}
+
+/*-----------------btn--------------------*/
+.btn-group{
+    height: 32px;
+    width: 110px;
+    border-radius: 2px;
+    background-color:#6a8e66;
+    color: #fff;
+    margin-left: 10px;
+}
+.btn-group i{
+    text-align: center;
+    margin-top: 9px;
+    margin-left: 9px;
+    font-size: 15px;
+}
+.add-btn{
+    height: 32px;
+    width: 83px;
+    float: right;
+    border-radius: 0 2px 2px 0;
+    background-color:#739e73;
+    border: none;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+.minus,
+.comoress{
+    width: 35px;
+    height: 35px;
+    color: #444;
+    border:1px solid ;
+
 }
